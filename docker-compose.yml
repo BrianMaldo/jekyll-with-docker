@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jekyll-serve:
+    image: 'jekyll/jekyll:4'
+    command: 'jekyll serve --config _config.yml,_config.dev.yml'
+    ports:
+      - 4000:4000
+    volumes:
+      - '.:/srv/jekyll'
